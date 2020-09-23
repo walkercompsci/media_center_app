@@ -1,6 +1,6 @@
 # media_center_app
 
-A new Flutter projectsadwc w     cwD 
+A new Flutter project.
 
 ## Getting Started
 
