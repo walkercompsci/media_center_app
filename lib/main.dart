@@ -32,9 +32,23 @@ class _NinjaCardState extends State<NinjaCard> {
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-
+          Text(
+              'STUDENT                   TEACHER',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 1.3,
+              )
+            ),
+            SizedBox(height: 10.0),
+            Text(
+                'STUDENTttttt',
+                style: TextStyle(
+                  color: Colors.grey,
+                  letterSpacing: 2.0,
+                )
+            ),
           ],
         ),
       ),

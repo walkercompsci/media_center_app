@@ -41,7 +41,13 @@ class _NinjaCardState extends State<NinjaCard> {
             //child: CircleAvatar(
             //backgroundImage: AssetImage('assets/thumb.jpg'),
             //radius: 40.0,
-            //),
+            //),            SizedBox(height: 30.0),
+            //            Row(
+            //              children: <Widget>[
+            //                Icon(
+            //                    Icons.email,
+            //                    color: Colors.grey[400]
+            //                ),
             //),
             Divider(
               height: 60.0,
