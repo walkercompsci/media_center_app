@@ -1,3 +1,4 @@
+import 'package:http/http.dart';
 import 'dart:convert';
 import 'package:intl/intl.dart';
 
@@ -7,6 +8,7 @@ class WorldTime {
   String time; // the time in that location
   String flag;  // url to an asset flag icon
   String url; // location url for api endpoint
+  bool isDaytime; // true or false if daytime or not
 
   WorldTime({ this.location, this.flag, this.url });
 
@@ -14,7 +16,7 @@ class WorldTime {
 
     try {
       // make the request
-      Response response = await get('http://worldtimeapi.org/api/time'),
+      Response response = await get('http://worldtimeapi.org/api/timezone/$url'),
       Map data = jsonDecode(response.body);
       //print(data);
 
@@ -29,11 +31,16 @@ class WorldTime {
       now = now.add(Duration(hours: int.parse(offset)));
 
       // set the time property
-      time = now.toString();
+      isDaytime =  now.hour > 6 && now.hour < 20 ? true : false;
+      time = DateFormat.jm().format(now);
     }
     catch (e) {
       print('caught error: $e');
       time = 'could not get time data';
     }
+
+
+
   }
+
 }
