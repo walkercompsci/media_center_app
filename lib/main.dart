@@ -21,14 +21,26 @@ class _NinjaCardState extends State<NinjaCard> {
         backgroundColor: Colors.black87,
         elevation: 0.0,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
+        floatingActionButton: Column(
+            children: [
+              FloatingActionButton(
+                child: Icon(
+                    Icons.delete
+                ),
+                onPressed: () {},
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              FloatingActionButton(
+                child: Icon(
+                    Icons.star
+                ),
+                onPressed: () {},
+              )
+            ]
+        ),
 
-          });
-        },
-        backgroundColor: Colors.grey[800],
-      ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
         child: Column(
