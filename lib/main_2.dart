@@ -14,73 +14,102 @@ class _NinjaCardState extends State<NinjaCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white70,
-      appBar: AppBar(
-        title: Text('Mediaplex'),
-        centerTitle: true,
-        backgroundColor: Colors.black87,
-        elevation: 0.0,
-      ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.fromLTRB(50, 0, 0, 455),
-        child: Row(
-            children: [
-              FloatingActionButton(
-                child: Icon(
-                    Icons.delete
+        backgroundColor: Colors.white70,
+        appBar: AppBar(
+          title: Text('Mediaplex'),
+          centerTitle: true,
+          backgroundColor: Colors.black87,
+          elevation: 0.0,
+        ),
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.fromLTRB(50, 0, 0, 455),
+          child: Row(
+              children: [
+                FloatingActionButton(
+                  child: Icon(
+                      Icons.star_border_purple500_sharp
+                  ),
+                  onPressed: () {}, // ask for student log in
                 ),
-                onPressed: () {}, // ask for student log in
-              ),
-              SizedBox(
-                width: 112.5,
+                SizedBox(
+                  width: 112.5,
 //                  height: 100,
-              ),
-              FloatingActionButton(
-                child: Icon(
-                    Icons.star
                 ),
-                onPressed: () {}, // ask for teacher log in
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 205, 0, 0),
-                child: Column(
-                  children: [
-                    FloatingActionButton(
-                      child: Icon(
-                          Icons.star
+                FloatingActionButton(
+                  child: Icon(
+                      Icons.watch_later_outlined
+                  ),
+                  onPressed: () {}, // ask for teacher log in
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(100, 140, 0, 0),
+                  child: Column(
+                    children: [
+                      FloatingActionButton(
+                        child: Icon(
+                            Icons.star_border_rounded
+                        ),
+                        onPressed: () {}, // ask for teacher log in
                       ),
-                      onPressed: () {}, // ask for teacher log in
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-            ]
+              ]
+          ),
         ),
-      ),
 
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Text(
-                'STUDENT                   TEACHER',
-                style: TextStyle(
-                  color: Colors.grey,
-                  letterSpacing: 1.3,
-                )
-            ),
-            SizedBox(height: 10.0),
-            Text(
-                'STUDENTttttt',
-                style: TextStyle(
-                  color: Colors.grey,
-                  letterSpacing: 2.0,
-                )
-            ),
-          ],
-        ),
-      ),
+        body: Padding(
+            padding: EdgeInsets.fromLTRB(30.0, 140.0, 30.0, 0.0),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Text(
+                      '       SIGN IN                          SIGN OUT',
+                      style: TextStyle(
+                        color: Colors.grey,
+                        letterSpacing: 1.3,
+                      )
+                  ),
+                  SizedBox(height: 10.0),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(25, 100, 0, 0),
+                    child: Column(
+                      children: [
+                        Text(
+                            ' STUDENT                      TEACHER',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              letterSpacing: 2.0,
+                            )
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                      padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
+                      child: Row(
+                          children: [
+                            FloatingActionButton(
+                              child: Icon(
+                                  Icons.star_border_purple500_sharp
+                              ),
+                              onPressed: () {}, // ask for student log in
+                            ),
+                            SizedBox(
+                              width: 112.5,
+                            ),
+                            FloatingActionButton(
+                              child: Icon(
+                                  Icons.watch_later_outlined
+                              ),
+                              onPressed: () {}, // ask for teacher log in
+                            ),
+                          ]
+                      )
+                  )
+                ]
+            )
+        )
     );
   }
 }
