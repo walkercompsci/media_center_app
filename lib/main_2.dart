@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-  home: NinjaCard(),
+  home: MediaApp(),
 ));
 
-class NinjaCard extends StatefulWidget {
+class MediaApp extends StatefulWidget {
   @override
-  _NinjaCardState createState() => _NinjaCardState();
+  _MediaAppState createState() => _MediaAppState();
 }
 
-class _NinjaCardState extends State<NinjaCard> {
+class _MediaAppState extends State<MediaApp> {
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class _NinjaCardState extends State<NinjaCard> {
                   onPressed: () {}, // ask for student log in
                 ),
                 SizedBox(
-                  width: 112.5,
+                  width: 75,
 //                  height: 100,
                 ),
                 FloatingActionButton(
@@ -42,7 +42,7 @@ class _NinjaCardState extends State<NinjaCard> {
                   onPressed: () {}, // ask for teacher log in
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(100, 140, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(75, 140, 0, 0),
                   child: Column(
                     children: [
                       FloatingActionButton(
@@ -59,9 +59,9 @@ class _NinjaCardState extends State<NinjaCard> {
         ),
 
         body: Padding(
-            padding: EdgeInsets.fromLTRB(30.0, 140.0, 30.0, 0.0),
+            padding: EdgeInsets.fromLTRB(0, 35, 0, 0),
             child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
                       '       SIGN IN                          SIGN OUT',
@@ -72,7 +72,7 @@ class _NinjaCardState extends State<NinjaCard> {
                   ),
                   SizedBox(height: 10.0),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(25, 100, 0, 0),
+                    padding: const EdgeInsets.fromLTRB(25, 75, 0, 0),
                     child: Column(
                       children: [
                         Text(
@@ -86,7 +86,7 @@ class _NinjaCardState extends State<NinjaCard> {
                     ),
                   ),
                   Padding(
-                      padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
+                      padding: const EdgeInsets.fromLTRB(35, 85, 30, 0),
                       child: Row(
                           children: [
                             FloatingActionButton(
@@ -96,7 +96,7 @@ class _NinjaCardState extends State<NinjaCard> {
                               onPressed: () {}, // ask for student log in
                             ),
                             SizedBox(
-                              width: 112.5,
+                              width: 75,
                             ),
                             FloatingActionButton(
                               child: Icon(

@@ -22,7 +22,7 @@ class _MediaAppState extends State<MediaApp> {
           elevation: 0.0,
         ),
         floatingActionButton: Padding(
-          padding: const EdgeInsets.fromLTRB(50, 0, 0, 455),
+          padding: const EdgeInsets.fromLTRB(30, 0, 0, 455),
           child: Row(
               children: [
                 FloatingActionButton(
@@ -32,7 +32,7 @@ class _MediaAppState extends State<MediaApp> {
                   onPressed: () {}, // ask for student log in
                 ),
                 SizedBox(
-                  width: 75,
+                  width: 30,
 //                  height: 100,
                 ),
                 FloatingActionButton(
@@ -41,15 +41,29 @@ class _MediaAppState extends State<MediaApp> {
                   ),
                   onPressed: () {}, // ask for teacher log in
                 ),
+                SizedBox(
+                  width: 5,
+                ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(75, 140, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(0, 150, 0, 0),
                   child: Column(
                     children: [
-                      FloatingActionButton(
-                        child: Icon(
-                            Icons.star_border_rounded
-                        ),
-                        onPressed: () {}, // ask for teacher log in
+                      Text(
+                          'SIGN IN',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            letterSpacing: 1.3,
+                          )
+                      ),
+                      SizedBox(
+                        height: 75,
+                      ),
+                      Text(
+                          'SIGN OUT',
+                          style: TextStyle(
+                            color: Colors.grey,
+                            letterSpacing: 1.3,
+                          )
                       ),
                     ],
                   ),
@@ -57,36 +71,20 @@ class _MediaAppState extends State<MediaApp> {
               ]
           ),
         ),
-
         body: Padding(
-            padding: EdgeInsets.fromLTRB(0, 35, 0, 0),
+            padding: EdgeInsets.fromLTRB(0, 25, 0, 0),
             child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                      '       SIGN IN                          SIGN OUT',
+                      '  STUDENT    TEACHER',
                       style: TextStyle(
                         color: Colors.grey,
-                        letterSpacing: 1.3,
+                        letterSpacing: 1.0625,
                       )
                   ),
-                  SizedBox(height: 10.0),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(25, 0, 0, 0),
-                    child: Column(
-                      children: [
-                        Text(
-                            ' STUDENT                      TEACHER',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              letterSpacing: 2.0,
-                            )
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                      padding: const EdgeInsets.fromLTRB(35, 105, 30, 0),
+                      padding: const EdgeInsets.fromLTRB(15, 105, 30, 0),
                       child: Row(
                           children: [
                             FloatingActionButton(
@@ -96,7 +94,7 @@ class _MediaAppState extends State<MediaApp> {
                               onPressed: () {}, // ask for student log in
                             ),
                             SizedBox(
-                              width: 75,
+                              width: 30,
                             ),
                             FloatingActionButton(
                               child: Icon(
