@@ -4,7 +4,7 @@
 //watch_later_outlined=teacher
 //star_border_rounded=studentView possibly
 
-
+//make all buttons work/print the name of the button
 
 
 // to move words, subtract L from the L in the buttons fromLTRB and so on
